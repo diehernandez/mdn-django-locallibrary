@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% endif %}
+{% endif %}
+<div  class="center-block" id="login" style="width: 40%;">
+    <form class="form-horizontal form" name="LoginForm"  method="post">
+    {% csrf_token %}
+    {% if next %}
+        <input type="hidden" name="next" value="{{ next }}" />
+    {% endif %}
+    <div class="control-group">
+        <label class="control-label" for="username">Username</label>
+        <div class="controls">
+            <input class="form-control" type="text" id="username" name="username"  placeholder="Username">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+        </div>
+  </div><br>
+  <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn btn-success">Login</button>
+        </div>
+    </div>
+    </form>
+    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+</div>
+
+
+
+</div>
+
+
+{% endblock %}

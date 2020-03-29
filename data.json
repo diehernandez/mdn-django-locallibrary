@@ -1,0 +1,50 @@
+[
+  {
+    "model": "catalog.Author",
+    "fields": {
+      "first_name": "Ray",
+      "last_name": "Bradbury",
+      "date_of_birth": "1981-09-07",
+      "date_of_death": "2012-06-05"
+    }
+  },
+  {
+    "model": "catalog.Author",
+    "fields": {
+      "first_name": "Pure",
+      "last_name": "Bradbury",
+      "date_of_birth": "2000-09-07"
+    }
+  },
+  {
+    "model":"catalog.Genre",
+    "fields": {
+      "name" :"Miedo"
+    }
+  },
+  {
+    "model":"catalog.Genre",
+    "fields": {
+      "name" :"thriller"
+    }
+  },
+  {
+    "model":"catalog.Genre",
+    "fields": {
+      "name" :"Sobrenatural"
+    }
+  },
+  {
+    "model":"catalog.Language",
+    "fields": {
+      "name" :"Arab"
+    }
+  },
+  {
+    "model":"catalog.Language",
+    "fields": {
+      "name" :"Japonese"
+    }
+  },
+  
+]

@@ -45,6 +45,8 @@
               {% if user.is_staff %}
               <li>Staff</li>
               <li><a href="{% url 'all-borrowed' %}">All Borrowed</a></li>
+              <li><a href="{% url 'author-create' %}">New Author</a></li>
+              <li><a href="{% url 'book-create' %}">New Book</a></li>
               {% endif %}
               {% endif %}
           </ul>
